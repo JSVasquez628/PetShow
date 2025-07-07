@@ -27,3 +27,12 @@ export const getProducto = (id) =>
 export const getAllCategorias = () => CategoriaAPI.get('/');
 
 export const createCategoria = (categoria) => CategoriaAPI.post('/', categoria);
+
+export const deleteCategoria = (id) => 
+  CategoriaAPI.patch(`/${id}/`, { activo: false });
+
+export const updateCategoria = (id, categoria) => 
+  CategoriaAPI.put(`/${id}/`, categoria);
+
+export const getCategoria = (id) => 
+  CategoriaAPI.get(`/${id}/`);
